@@ -25,19 +25,20 @@ h4{ font-size: 18px; margin-top: 0; }
 .slide{ padding: 25px 0; }
 
 /* Services */
-.services{ background: #4c1b1b; padding: 25px 0; color: #fefefe; }
+.services{ background: #000; padding: 25px 0; color: #fefefe; }
 .services h1{ text-align: center; color: #fcfae1; text-transform: uppercase; font-size: 28px; }
 .services .widget-wrapper{ text-align: center; }
 .services .widget-wrapper h2{ text-transform: uppercase; font-size: 1.2em; color: #f6e497; font-weight: 200; }
-.services .widget-wrapper:first-child{ padding: 15px 0; }
-.services .widget-wrapper > img{ border: 15px solid #FFF; }
+.services .widget-wrapper img{  height : 200px; }
+.services-item
 
 /* Middle Area */
 .middle-area{ padding: 25px 0; }
 .middle-area h1{ color: #4c1b1b; text-transform: uppercase;  }
 
 /* Middle Area - Sidebar */
-.sidebar{ background: #f6e497; padding: 20px; margin: 0 0 30px;  }
+.sidebar{ background: gray; padding: 20px; margin: 0 0 30px;  }
+/* #sidebar-1{} #sidebar-2 */
 
 /* Middle Area - Featured News */
 .home .news h1{ color: #4c1b1b; text-transform: uppercase; font-size: 38px; font-weight: bold; }
@@ -72,21 +73,9 @@ embed, iframe, object, video { margin-bottom: 1.6em; max-width: 100%; vertical-a
 .format-image h2 { color: #fff; background: #717171; padding: 15px; }
 .format-video h2 { color: #fff; background: #211e1e; padding: 15px; }
 .format-standard h2 { color: #444; background: #d2d2d2; padding: 15px; }
-
+/* Post Images */
+.post_img_pre{ width : 100%; height : auto; }
 /* Produtos*/
-#posts_produtos{
-padding : 100px auto;	
-}
-.produtos_img{
-min-height: 300px;	
-}
-.produtos_img img{
-max-width : 100%;
-height : auto;	
-}
-.produtos_p_img{
-width: 50% !important;
-height: auto;
-display: block;
-margin : 0 auto;
-}
+#posts_produtos{ padding : 100px auto;}
+.produtos_img{ min-height: 300px; }
+.produtos_p_img{ width: 50% !important; height: auto; display: block; margin : 0 auto; }

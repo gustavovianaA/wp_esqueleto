@@ -60,54 +60,17 @@ function wpcurso_sidebars(){
 			'name' => 'Services 1',
 			'id' => 'services-1',
 			'description' => 'First Services Area.',
-			'before_widget' => '<div class="widget-wrapper">',
+			'before_widget' => '<div class="col-4 widget-wrapper">',
 			'after_widget' => '</div>',
 			'before_title' => '<h2 class="widget-title">',
 			'after_title' => '</h2>'
 		)
 	);
-	register_sidebar(
-		array(
-			'name' => 'Services 2',
-			'id' => 'services-2',
-			'description' => 'Second Services Area.',
-			'before_widget' => '<div class="widget-wrapper">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>'
-		)
-	);
-	register_sidebar(
-		array(
-			'name' => 'Services 3',
-			'id' => 'services-3',
-			'description' => 'Third Services Area.',
-			'before_widget' => '<div class="widget-wrapper">',
-			'after_widget' => '</div>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>'
-		)
-	);				
+	
+					
 }
 
-/*function check_for_category_single_template( $t )
-{
-  foreach( (array) get_the_category() as $cat ) 
-  { 
-    if ( file_exists(get_stylesheet_directory() . "/single-category-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single/single-category-{$cat->slug}.php"; 
-    if($cat->parent)
-    {
-      $cat = get_the_category_by_ID( $cat->parent );
-      if ( file_exists(get_stylesheet_directory() . "/single-category-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single/single-category-{$cat->slug}.php";
-    }
-  } 
-  return $t;
-}
-add_filter('single_template', 'check_for_category_single_template');
-*/
-
-
-
+/* Templates específicos por categoria */
 function template_category( $template = '' ){
     $categories = get_the_category();
     foreach( $categories as $cat ):

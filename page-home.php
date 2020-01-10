@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 	<div class="content-area">
 		<main>
-			<section class="slide">
-				<?php echo do_shortcode( '[recent_post_slider design="design-1"]' ); ?>
-			</section>
+
 			<section class="services">
 				<div class="container">
-					<h1>Our Services</h1>
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="services-item">
+					<h1>Serviços</h1>
+				
+						
+							<div class="services-item row">
 								<?php 
 								if( is_active_sidebar( 'services-1' )){
 									dynamic_sidebar( 'services-1' );
@@ -17,28 +15,10 @@
 
 								?>
 							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="services-item">
-								<?php 
-								if( is_active_sidebar( 'services-2' )){
-									dynamic_sidebar( 'services-2' );
-								}
-
-								?>								
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="services-item">
-								<?php 
-								if( is_active_sidebar( 'services-3' )){
-									dynamic_sidebar( 'services-3' );
-								}
-
-								?>								
-							</div>
-						</div>
-					</div>
+					
+					
+					
+					
 				</div>				
 			</section>
 			<section class="middle-area">
@@ -109,7 +89,7 @@
 					
 
 					
-							<h2 class="text-center ">Produtos</h2>
+							<h2 class="text-center ">Produtos 1</h2>
 							<div  class="row">
 							<?php 
 							// Se houver algum post
@@ -135,7 +115,7 @@ $the_query = new WP_Query( $args );
 								<?php if(has_post_thumbnail()) : ?>
 								
 								<!-- IMAGEM DE POST -->
-								<figure class="produtos_img"><?php the_post_thumbnail(); ?></figure>					
+								<div class="produtos_img"><? the_post_thumbnail('medium' , array('class'=>'post_img_pre')) ?></div>						
 								
                                 <!-- TÍTULO COM LINK / DATA / AUTOR ... -->
 								
@@ -202,7 +182,7 @@ $the_query = new WP_Query( $args );
 								<?php if(has_post_thumbnail()) : ?>
 								
 								<!-- IMAGEM DE POST -->
-								<figure class="produtos_img"><?php the_post_thumbnail(); ?></figure>					
+								<div class="produtos_img"><? the_post_thumbnail('medium' , array('class'=>'post_img_pre')) ?></div>					
 								
                                 <!-- TÍTULO COM LINK / DATA / AUTOR ... -->
 								
