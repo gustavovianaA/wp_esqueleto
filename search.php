@@ -3,11 +3,11 @@
 		<div id="main">
 			<div class="container">
 
-				<h2>Search results for: </h2><?php echo get_search_query(); ?>
+				<h2>Busca por: <?php echo get_search_query(); ?></h2>
 
 				<?php 
 
-				get_search_form();
+				//get_search_form();
 
 				while( have_posts() ): the_post();
 

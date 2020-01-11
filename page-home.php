@@ -213,6 +213,13 @@ $the_query = new WP_Query( $args );
 					</div>
 				</div>
 			</section>		
+	  
+
+
+
+
+
+
 	  </main>
 	</div>
 <?php get_footer(); ?>

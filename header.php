@@ -31,4 +31,10 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="banner">
+
+			<img src="<? echo get_template_directory_uri() . '/img/banner.jpg' ?>">
+         
+		</section>
 	</header>
