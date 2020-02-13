@@ -23,7 +23,7 @@
 						<?php 
 						wp_nav_menu( 
 							array( 
-								'theme_location' => 'my_main_menu' 
+								'theme_location' => 'main_menu' 
 							) 
 						); 
 						?>

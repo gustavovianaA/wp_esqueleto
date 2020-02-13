@@ -79,3 +79,61 @@ embed, iframe, object, video { margin-bottom: 1.6em; max-width: 100%; vertical-a
 #posts_produtos{ padding : 100px auto;}
 .produtos_img{ min-height: 300px; }
 .produtos_p_img{ width: 50% !important; height: auto; display: block; margin : 0 auto; }
+
+/* Carousel */
+  .cr_multiplos{
+    background : #292323;
+    padding : 30px 0 50px 0;
+    overflow : hidden;}
+  .cr_multiplos h2{
+    color : #ffcc00;}
+  .cr_multiplos h4 , .cr_multiplos h5 , .cr_multiplos h6 , .cr_multiplos p{
+    color : #fff;}
+  .cr_multiplos .carousel_item_post {
+    padding : 0 10px;}
+  .cr_multiplos .carousel_item_post div{
+    padding : 10px 50px;
+    background : rgba(0,0,0,0.3);
+    /*border-bottom : 1px solid #ffcc00;*/
+    transition : .3s;}
+  .cr_multiplos .carousel_item_post div:hover{
+    background : rgba(0,0,0,0.7);}
+  .cr_multiplos .carousel_item_post img{
+    width : 100%;
+    height : 240px;
+    margin : 10px 0 20px 0;
+    border-radius : 50%;
+    border : 1px solid #ffcc00;}
+  .cr_multiplos  .cr_nome{
+    /*border-bottom: 1px solid #ffcc00;*/
+    padding : 0 10px;
+    color : #ffff66;}
+  .cr_multiplos .carousel_item_post p{
+  	font-size : 1.2em;
+    }
+  .cr_multiplos .depo_aspas{
+   	color : yellow;
+   	font-size : 2em;
+   	line-height: 0;
+   	margin : 0 5px;
+   	position : relative;
+   	top : 10px;
+   }
+  .cr_multiplos .carousel-inner{
+    overflow : visible;
+    word-wrap : break-word;}
+  .cr_multiplos .cr-control{
+    color : #000;
+    display:inline-block;
+    font-weight: 100; 
+    font-size: 2em;
+    color : #ffcc00;}
+  .cr_multiplos .carousel-indicators{
+    bottom: -50px;}
+  @media (max-width: 768px) 
+	{
+  	 .cr_multiplos .carousel_item_post {
+  	 	width: 70%;
+
+  	 }
+	}

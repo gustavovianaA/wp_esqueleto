@@ -77,11 +77,7 @@
 					</div>
 				</div>				
 			</section>
-			<section class="map">
-				<div class="container">
-					<div class="row">Mapa</div>
-				</div>				
-			</section>
+		
 
            <!-- produtos posts -->
 			<section class="produtos">
@@ -215,9 +211,118 @@ $the_query = new WP_Query( $args );
 			</section>		
 	  
 
+<section class="carousel-posts">
+<section class="cr_multiplos">   
+
+ <h2 class="text-center py-0 mt-0 mb-4">Carousel - Ex : depoimentos</h2>
+
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    
+
+    <?php 
+							// Se houver algum post
+							
+							$args = array(
+    'post_type'         => 'post',
+    'category_name'        => 'depoimentos'
+);
+$the_query = new WP_Query( $args );
+
+							if( $the_query->have_posts() ):
+								// Enquanto houver posts, mostre-os pra gente
+								$count = 1;
+								while( $the_query->have_posts() ): $the_query->the_post();
+								if($count == 1) {
+							?>
+								<div class=" carousel-item active">
+    							<div class=" container px-5 ">  
+    							<section class="cr_cards row"> 
+
+    							<? } ?>
+                         
+								<!-- monta o início do item de carousel e o título -->
+                                 <article class="carousel_item_post col-md-4 text-center ">
+     							 <div>
+     							 <h3><span class="cr_nome"><?php the_title(); ?></span></h3>
+
+								<?php if(has_post_thumbnail()) : ?>
+								
+								<!-- IMAGEM DE POST -->
+								<? the_post_thumbnail('medium') ?>
+
+												
+								
+                                <!-- TÍTULO COM LINK / DATA / AUTOR ... -->
+								
+					            <?php endif; ?>
+								 
+								<!-- RESUMO -->
+								<?php the_excerpt(); ?>
+							    
+							    <!-- LINK POST -->
+
+							    </div>
+                             	</article>
+
+							    
+				             <?php if(($count % 3) == 0 ){ ?>
+
+				             </section>
+				         		</div>
+				         			</div>
+
+				         	<div class=" carousel-item ">
+    						<div class=" container px-5 ">  
+    						<section class="cr_cards row">
+
+    						<?php } ?>
 
 
+    						 <?php $count++; ?>
 
+							 <?php endwhile; ?>
+
+							</section>
+				         		</div>
+				         			</div>
+
+							<? else: ?>
+
+							 <p>Não Há nada para ser mostrado...</p>
+
+							<?php endif; ?>
+
+
+     
+
+  
+
+   
+  </div> <!-- Fim carousel-inner -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="cr-control" aria-hidden="true">&lt;</span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="cr-control" aria-hidden="true">&gt;</span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</section><!-- fim cr_multilos -->
+</section>	
+
+<!-- mapa de localização -->
+<section class="map">
+				<div class="container">
+					<div class="row">Mapa</div>
+				</div>				
+			</section>
 
 
 	  </main>
